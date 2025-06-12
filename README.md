@@ -53,15 +53,15 @@ Most systems (e.g., **AgriLyst, CropX**) target large-scale operations, leaving 
 ---
 
 ## Model Training Overview
-| Instance | Model                         | Optimizer | Regularization | Epochs | Early Stopping | Layers              | Learning Rate | Accuracy | F1 Score | Recall | Precision |
-|----------|-------------------------------|-----------|----------------|--------|----------------|---------------------|----------------|----------|----------|--------|-----------|
-| 1        | CNN                            | Adam      | None           | 20     | Yes            | 7                   | 0.0005         | 0.7792   | 0.8046   | 0.8974 | 0.7292    |
-| 2        | CNN                            | Adam      | L1             | 15     | Yes            | 8                   | 0.0001         | 0.5065   | 0.6724   | 1.0000 | 0.5065    |
-| 3        | CNN                            | RMSprop   | L2             | 20     | Yes            | 7                   | 0.0005         | 0.4935   | 0.0000   | 0.0000 | 0.0000    |
-| 4        | CNN                            | RMSprop   | L1             | 15     | Yes            | 8                   | 0.0001         | 0.4935   | 0.6609   | 0.9744 | 0.5000    |
-| 5        | VGG16 + Logistic Regression    | N/A       | None           | N/A    | No             | 1 (Logistic only)   | N/A            | **0.9610** | **0.9620** | **0.9700** | **0.9500** |
+| Instance | Model                        | Optimizer | Regularization | Epochs | Early Stopping | Layers                 | Learning Rate | Accuracy | F1 Score | Recall | Precision | Loss    |
+|----------|------------------------------|-----------|----------------|--------|----------------|------------------------|----------------|----------|----------|--------|-----------|---------|
+| 1        | CNN                          | Adam      | None           | 20     | Yes            | 7                      | 0.0005         | 0.7792   | 0.8046   | 0.8974 | 0.7292    | 0.6697 |
+| 2        | CNN                          | Adam      | L1             | 15     | Yes            | 8                      | 0.0001         | 0.5065   | 0.6724   | 1.0000 | 0.5065    | 5.2554 |
+| 3        | CNN                          | RMSprop   | L2             | 20     | Yes            | 7                      | 0.0005         | 0.4935   | 0.0000   | 0.0000 | 0.0000    | 0.7816 |
+| 4        | CNN                          | RMSprop   | L1             | 15     | Yes            | 8                      | 0.0001         | 0.4935   | 0.6609   | 0.9744 | 0.5000    | 5.1737 |
+| 5        | VGG16 + Logistic Regression  | N/A       | None           | N/A    | No             | 1 (Logistic Regression) | N/A            | **0.9610** | **0.9620** | **0.9700** | **0.9500** | N/A     |
 
-**Best model:** ✅ Instance 5 (VGG16 + Logistic Regression)
+**Best model:** Instance 5 (VGG16 + Logistic Regression)
 ---
 
 ## Model Evaluation Strategy
