@@ -42,7 +42,7 @@ Most systems (e.g., **AgriLyst, CropX**) target large-scale operations, leaving 
 
 ## Dataset Summary
 
-📥 **Download:** [HydroFarm Dataset (figshare)](https://figshare.com/articles/dataset/Dataset_HydroFarm/28340516/1?file=52114643)
+**Download:** [HydroFarm Dataset (figshare)](https://figshare.com/articles/dataset/Dataset_HydroFarm/28340516/1?file=52114643)
 
 - **Classes:** `healthy`, `unhealthy`
 - **Structure:** Split into `train`, `test`, and `validation` directories, each with subfolders per class.
@@ -55,10 +55,10 @@ Most systems (e.g., **AgriLyst, CropX**) target large-scale operations, leaving 
 ## Model Training Overview
 | Instance | Model                        | Optimizer | Regularization | Epochs | Early Stopping | Layers                 | Learning Rate | Accuracy | F1 Score | Recall | Precision | Loss    |
 |----------|------------------------------|-----------|----------------|--------|----------------|------------------------|----------------|----------|----------|--------|-----------|---------|
-| 1        | CNN                          | Adam      | None           | 20     | Yes            | 7                      | 0.0005         | 0.7792   | 0.8046   | 0.8974 | 0.7292    | 0.6697 |
-| 2        | CNN                          | Adam      | L1             | 15     | Yes            | 8                      | 0.0001         | 0.5065   | 0.6724   | 1.0000 | 0.5065    | 5.2554 |
-| 3        | CNN                          | RMSprop   | L2             | 20     | Yes            | 7                      | 0.0005         | 0.4935   | 0.0000   | 0.0000 | 0.0000    | 0.7816 |
-| 4        | CNN                          | RMSprop   | L1             | 15     | Yes            | 8                      | 0.0001         | 0.4935   | 0.6609   | 0.9744 | 0.5000    | 5.1737 |
+| 1        | CNN                          | Adam      | None           | 20     | Yes            | 8                      | 0.0005         | 0.6883   | 0.7000   |  0.7179 | 0.6829  | 0.6417 |
+| 2        | CNN                          | Adam      | L1             | 15     | Yes            | 8                      | 0.0001         | 0.4935   | 0.6609   | 0.9744 | 0.5000   | 5.2036 |
+| 3        | CNN                          | RMSprop   | L2             | 20     | Yes            | 8                      | 0.0005         | 0.5584   | 0.2917   | 0.1795 | 0.7778   | 0.7839 |
+| 4        | CNN                          | RMSprop   | L1             | 15     | Yes            | 8                      | 0.0001         | 0.5455   | 0.6847   |0.9744  | 0.5278   | 5.0626|
 | 5        | VGG16 + Logistic Regression  | N/A       | None           | N/A    | No             | 1 (Logistic Regression) | N/A            | **0.9610** | **0.9620** | **0.9700** | **0.9500** | N/A     |
 
 **Best model:** Instance 5 (VGG16 + Logistic Regression)
@@ -74,5 +74,8 @@ Most systems (e.g., **AgriLyst, CropX**) target large-scale operations, leaving 
   - **Recall**
 - **Best-performing model** is saved to `saved_models/best_model.h5` or `.pkl`
 - Fallback logic ensures predictions work regardless of model type
+
+# Video
+**Watch:** [Presentation Video](https://figshare.com/articles/dataset/Dataset_HydroFarm/28340516/1?file=52114643)
 
 ---
