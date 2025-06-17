@@ -76,6 +76,6 @@ Most systems (e.g., **AgriLyst, CropX**) target large-scale operations, leaving 
 - Fallback logic ensures predictions work regardless of model type
 
 # Video
-**Watch:** [Presentation Video](https://figshare.com/articles/dataset/Dataset_HydroFarm/28340516/1?file=52114643)
+**Watch:** [Presentation Video](https://youtu.be/IqhNEPPTFE4)
 
 ---
